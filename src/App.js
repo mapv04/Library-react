@@ -1,10 +1,18 @@
 import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
+import './styles/tailwind-styles.css';
+
+//Pages
+import Login from './Login';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Library</h1>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Login} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
